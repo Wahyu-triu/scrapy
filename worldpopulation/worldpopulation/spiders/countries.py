@@ -30,3 +30,6 @@ class CountriesSpider(scrapy.Spider):
                'year':year,
                'population':population
                }
+    
+    # good code but try to scrap more data
+    # like population increasment (in perc), or else. thank you, you're doing great job.
