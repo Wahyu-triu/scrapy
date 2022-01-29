@@ -1,5 +1,0 @@
-response.xpath('//article//div[@class="media__date"]/span/@title').extract() = date, detik
-response.xpath('//article//h3[@class="media__title"]/a/text()').extract() = title, detik
-response.xpath("//meta[@name='dtk:author']/@content").extract() = author, detik, tp harus pindah halaman
-response.xpath("//meta[@name='createdate']/@content").extract() = createdate, detik, pindah halaman
-response.xpath("//meta[@name='publishdate']/@content").extract() = publishdate, detik, pindah halaman
