@@ -25,10 +25,22 @@ class CountriesSpider(scrapy.Spider):
         for row in rows:
             year = row.xpath(".//td[1]/text()").extract()
             population = row.xpath(".//td[2]/strong/text()").extract()
+            perc_yearly_change = row.xpath(".//td[3]/text()").extract()
+            yearly_change = row.xpath(".//td[4]/text()").extract()
+            mediam_age = row.xpath(".//td[6]/text()").extract()
+            density = row.xpath(".//td[8]/text()").extract()
+            perc_urban_pop = row.xpath(".//td[9]/text()").extract()
+            urban_pop = row.xpath(".//td[10]/text()").extract()
             yield {
                'country_name':name,
                'year':year,
-               'population':population
+               'population':population,
+               'yearly change (%)':perc_yearly_change,
+               'yeraly change':yearly_change,
+               'median age':mediam_age,
+               'density':density,
+               'urban pop (%)':perc_urban_pop,
+               'urban pop':urban_pop
                }
     
     # good code but try to scrap more data
