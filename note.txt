@@ -1,0 +1,37 @@
+scrapy commands:
+# spider is a crawler
+
+- bench : run quick benchmark test
+- fetch : fetch a urlusing the scrapy downloader
+- genspider : generate new spider using pre-define templates
+- runspider : run a self-contained spieder (without creating a project)
+- settings : get setting values
+- shell : interactive scraping console
+- strartproject : create new project
+- version : print scrapy version
+- view open url in browser, as seen by scrapy
+
+spider:
+- name : spider name (crawler name)
+- allowed_domain : domain that we want to crawl. can be more than one, so we must be list it.
+   + dont use http:// in the begining
+   + dong use / in the eng of url
+- start_urls : link that we want to scraping
+   + use https:// instead http://
+- pharse method : parse (mengurai) request that we get back from spider
+- getall() : get everthing into list from response.
+   + response.xpath(.....).getall()
+- yield:  yield dipakai pada saat menggunakan function generator. 
+Perlu diketahui function generator adalah sebuah fungsi yang me-return object yang 
+bisa di iterate, sehingga bisa gunakan dalam for loop
+
+next step:
+1. create a spider using genspider, the result in pre-defined spider. then we to spicify it.
+
+
+note:
+1. in one project, we can have some spiders
+
+links:
+1. https://www.w3schools.com/html/ = xpath() and html, css
+2. https://devhints.io/xpath cheatsheet xpath
