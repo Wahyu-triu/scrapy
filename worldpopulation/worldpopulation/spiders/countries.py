@@ -41,7 +41,4 @@ class CountriesSpider(scrapy.Spider):
                'density':density,
                'urban pop (%)':perc_urban_pop,
                'urban pop':urban_pop
-               }
-    
-    # good code but try to scrap more data
-    # like population increasment (in perc), or else. thank you, you're doing great job.
+            }
