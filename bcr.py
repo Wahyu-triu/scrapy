@@ -2,8 +2,7 @@
 import pandas as pd
 import bar_chart_race as bcr
 import matplotlib
-matplotlib.use('Qt5Agg')
-import ffmpeg
+matplotlib.use('Agg')
 
 def to_normal(number):
     result = []
@@ -19,7 +18,7 @@ def to_normal(number):
     return result
 
 # import data
-df = pd.read_csv('/worldpopulation/population_new.csv')
+df = pd.read_csv('/mnt/d/scrapy/worldpopulation/population_new.csv')
 
 # split the data into urban population and population
 urban_pop = df[['country_name', 'year', 'urban pop']]
@@ -70,7 +69,8 @@ bcr.bar_chart_race(df=df_top_pop,
                   title='Country with the Highest Population Since 1955',
                   filename = 'top_population.mp4',
                   figsize=(12,8),
-                  period_length=500,
+                  period_length=350,
+                  cmap ='dark12',
                   dpi = 300)
 
 # barchart race top population
@@ -80,6 +80,7 @@ bcr.bar_chart_race(df=df_top_urban,
                   title='Country with the Highest Urban Population Since 1955',
                   filename = 'top_urban_population.mp4',
                   figsize=(12,8),
-                  period_length=500,
+                  period_length=350,
+                  cmap ='dark12',
                   dpi = 300)
 
