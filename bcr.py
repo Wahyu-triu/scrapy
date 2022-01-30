@@ -1,3 +1,4 @@
+# source reference: "https://towardsdatascience.com/creating-bar-chart-race-animation-with-python-cdb01144074e"
 #import library
 import pandas as pd
 import bar_chart_race as bcr
@@ -83,4 +84,3 @@ bcr.bar_chart_race(df=df_top_urban,
                   period_length=350,
                   cmap ='dark12',
                   dpi = 300)
-
